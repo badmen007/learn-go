@@ -37,7 +37,7 @@ func enums() {
 
 	// b, kb, mb, gb, tb, pb 自增值
 	const (
-		b = 1 << (10 * iota)
+		b = 1 << (10 * iota) // 这里是什么意思？
 		kb
 		mb
 		gb

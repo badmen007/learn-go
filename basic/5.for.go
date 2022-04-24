@@ -23,11 +23,14 @@ func printFile(filename string) {
 		panic(err)
 	}
 
-	scanner := bufio.NewScanner(file)
+	scanner := bufio.NewScanner(file) // 为什么要这一句
 
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
+}
+
+func converToBin(m int) {
 }
 
 func main() {

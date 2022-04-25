@@ -34,7 +34,7 @@ func apply(op func(int, int) int, a, b int) int {
 	// 为了拿到函数的名字
 	p := reflect.ValueOf(op).Pointer()
 	opName := runtime.FuncForPC(p).Name()
-	fmt.Printf("Calling function %s with args"+"%d, %d"+opName, a, b)
+	fmt.Printf("Calling function \n%s with args"+"%d, %d"+opName, a, b)
 	return op(a, b)
 }
 

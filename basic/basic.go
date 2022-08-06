@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+	"math/cmplx"
+)
 
 var aa = 3
 var ss = "lll"
@@ -40,10 +44,30 @@ func variableShorter() {
 	fmt.Println(a, b, c, s)
 }
 
+//欧拉公式
+func euler() {
+	//c := 3 + 4i
+	//fmt.Println(cmplx.Abs(c))
+
+	//e i * pi + 1
+	fmt.Printf("%.3f \n",
+		cmplx.Exp(1i*math.Pi)+1)
+}
+
+// 计算三角形的斜边
+func triangle() {
+	var a, b int = 3, 4
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b))) // math.Sqrt 的参数是 float64 返回值也是 float64
+	fmt.Println(c)
+}
+
 func main() {
 	fmt.Println("hello world")
 	variableZeroValue()
 	variableInitialValue()
 	variableTypeDeduction()
 	variableShorter()
+
+	euler()
 }

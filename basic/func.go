@@ -49,6 +49,11 @@ func sum(numbers ...int) int {
 	return s
 }
 
+// 交换两个数  值传递和引用传递?
+func swap(a, b int) (int, int) {
+	return b, a
+}
+
 func main() {
 	if result, error := eval(3, 4, "x"); error != nil {
 		fmt.Println("Error:", error)
@@ -60,4 +65,8 @@ func main() {
 
 	fmt.Println(apply(pow, 3, 4))
 	sum(1, 2, 3, 4, 5, 6)
+
+	a, b := 3, 4
+	a, b = swap(a, b)
+	fmt.Println(a, b)
 }
